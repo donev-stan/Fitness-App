@@ -14,3 +14,12 @@ export const fetchData = async (url, options) => {
 
   return data;
 };
+
+export const fetchVideoData = async (url, options) => {
+  url = `https://youtube-search-and-download.p.rapidapi.com${url}`;
+  const response = await fetch(url, options);
+  const data = await response.json();
+
+  return data;
+};
+
