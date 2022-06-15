@@ -34,8 +34,6 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
 
       setSearch("");
       setExercises(searchedExercises);
-
-      console.log(searchedExercises);
     }
   };
 
