@@ -60,9 +60,9 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
         Awesome Exercises <br /> You Should Know
       </Typography>
 
-      <Box position={"relative"} mb={"72px"}>
+      <Box position="relative" mb="72px">
         <TextField
-          height="72px"
+          height="76px"
           value={search}
           onChange={(e) => setSearch(e.target.value.toLowerCase())}
           placeholder="Search Exercises"
@@ -88,20 +88,16 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
             right: 0,
           }}
           onClick={handleSearch}
+          style={{ borderTopLeftRadius: "0", borderBottomLeftRadius: "0" }}
         >
           Search
         </Button>
       </Box>
 
-      <Box
-        xs={{
-          position: "relative",
-          width: "100%",
-          p: "20px",
-        }}
-      >
+      <Box sx={{ position: "relative", width: "100%", p: "20px" }}>
         <HorizontalScrollbar
           data={bodyParts}
+          bodyParts
           bodyPart={bodyPart}
           setBodyPart={setBodyPart}
         />
